@@ -1,0 +1,202 @@
+body {
+    height: 100vh;
+    padding: 0.5rem 1rem;
+}
+
+#contact-form {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: light-dark(var(--light-border-card-color),var(--dark-border-card-color));
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-inline: 2rem;
+}
+
+.contact-form-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form-label {
+    font-weight: 700;
+    font-size: 1.12rem;
+}
+
+.contact-form-input {
+    border-radius: 0.375rem;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: light-dark(var(--light-border-card-color),var(--dark-border-card-color));
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: light-dark(var(--light-text-color),var(--dark-text-color));
+    background-color: transparent;
+}
+
+.contact-form-input:focus {
+    outline: 2px solid light-dark(var(--light-primary-color),var(--dark-primary-color));
+}
+
+/* .contact-form-input::placeholder {
+    color: red;
+} */
+
+.contact-form-error-text {
+    font-size: 0.75rem;
+    display: none;
+}
+
+#contact-form-btn {
+    background-color: light-dark(var(--light-primary-color), var(--dark-primary-color));
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.90rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: light-dark(var(--dark-text-color), var(--light-text-color));
+    cursor: pointer;
+}
+#contact-form-btn:hover {
+    background-color: light-dark(var(--light-primary-darkened-color), var(--dark-primary-darkened-color));
+    transition: all 0.3s ease-in-out;
+}
+
+#main-container {
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#contact-list {
+    height: 80%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border-radius: 0.375rem;
+    background-color: rgba(0, 0, 0, 0.185);
+    border-width: 3px;
+    border-style: solid;
+    border-color: light-dark(var(--light-border-card-color),var(--dark-border-card-color));
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    overflow: auto;
+}
+
+.contact-li-input {
+    justify-items: center;
+    flex-direction: row;
+    padding: 0.5rem;
+    width: 10rem;
+    border: 2px solid;
+    border-color: light-dark(var(--light-border-card-color),var(--dark-border-card-color));;
+}
+
+.contact-li-delete-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline;
+    flex-direction: column;
+    align-items: normal;
+    background-color: aqua;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+}
+
+.contact-li-edit-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    display: inline;
+    align-items: center;
+    background-color: aqua;
+    border: 2px solid black;
+    color: black;
+}
+
+.contact-li-btns-container {
+    align-items: center;
+}
+
+.contact-li-inputs-container {
+    width: 1rem;
+    align-items: center;
+    display: block;
+   flex-direction: column;
+
+}
+
+.contact-li {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 2px solid;
+    border-color: #0ed481;
+    gap: 2rem;
+    border-radius: 10px;
+    min-width: 600px;
+
+}
+
+.contact-li:hover {
+    background-color: rgba(67, 158, 243, 0.404);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-li-delete-btn:hover {
+    background-color: light-dark(var(--light-primary-darkened-color), var(--dark-primary-darkened-color));
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-li-edit-btn:hover {
+    background-color: light-dark(var(--light-primary-darkened-color), var(--dark-primary-darkened-color));
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (min-width: 768px)  {
+    .contact-li-input {
+        text-align: center;
+        border-style: hidden;
+        background-color: transparent;
+        color: rgb(245, 245, 245);
+    }
+    #contact-list { 
+        margin-left: 10rem; 
+        margin-right: 10rem;
+        min-width: 350px;
+    }
+    #contact-form {
+        margin-left: 8rem; 
+        margin-right: 8rem;
+        min-width: 3rem;
+    }
+} 
+
+
+@media (min-width: 1020px) {
+
+    #contact-form {
+       width: 50rem;
+       display:  grid;
+       margin: auto;
+       margin-bottom: 3rem;
+    }
+    #contact-list { 
+        margin: auto;
+        width: 45rem;
+        min-width: 6rem;
+    }
+}

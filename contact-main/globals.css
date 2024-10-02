@@ -1,0 +1,40 @@
+*,
+::before, 
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+:root {
+    color-scheme: light dark; 
+
+    --light-primary-color: #4b45c7;
+    --light-text-color: #ffffff;
+    --light-primary-darkened-color: #322e8c;
+    --light-background-page-color: #14223a8e; 
+    --light-border-card-color: #f3f3f3;
+
+    --dark-primary-color: #0ed481;
+    --dark-text-color: #ffffff;
+    --dark-primary-darkened-color: #05607c;
+    --dark-background-page-color: #1a272e;
+    --dark-border-card-color: #2b87ff;
+}
+
+body, h2, h1, p {
+    margin: 0;
+    background-color:light-dark(var(--light-background-page-color),var(--dark-background-page-color));
+}
+
+body, button {
+    font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#body {
+    background-color:light-dark(var(--light-background-page-color),var(--dark-background-page-color));
+}
+
